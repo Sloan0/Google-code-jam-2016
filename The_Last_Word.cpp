@@ -12,13 +12,13 @@ int main(){
   string winningWord = "";
   inputStream >> cases;
   cases += 1;
-  for (int i = 0; i < cases; i++){
+  for (int i = 1; i < cases; i++){
     inputStream >> word;
     winningWord = "";
     winningWord.insert(0,1,word[0]);
 
     for (int j = 1; j < word.size(); j++){
-      if (word[j] < winningWord[0]){
+      if (word[j] >= winningWord[0]){
         winningWord.insert(0,1,word[j]);
       }else{
         winningWord += word[j];
